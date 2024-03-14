@@ -19,12 +19,13 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.name == "Player" && !IsFinished)
         {
-            finishSound.Play();
+           //finishSound.Play();
 
-            IsFinished = true;
 
             //Calls CompleteLevel() with a delay of 2 seconds
-            Invoke("CompleteLevel", 2f);
+            Invoke("CompleteLevel", 1f);
+
+            IsFinished = true;
         }
     }
 

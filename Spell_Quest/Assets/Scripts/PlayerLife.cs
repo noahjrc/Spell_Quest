@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour, ICommand
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if ( collision.gameObject.CompareTag("Trap"))
+        if ( collision.gameObject.CompareTag("Traps"))
         {
             Die();
 
