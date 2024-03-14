@@ -13,7 +13,9 @@ public class PlayerMovement : MonoBehaviour, IMovement
     private Rigidbody2D rb;
     private BoxCollider2D collider;
     private SpriteRenderer sprite;
-    private Animator anim;
+   private Animator anim;
+
+    private int jump = 0;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -59,15 +61,21 @@ public class PlayerMovement : MonoBehaviour, IMovement
         Move(dirX);
         //rb.velocity = new Vector2(dirX * MoveSpeed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && jump < 1)
         {
             //4f is just a float
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+            jump += 1;
             JumpSoundEffect.Play();
         }
 
-        UpdateAnimationState();
-        
+       UpdateAnimationState();
+
+        if (IsGrounded())
+        {
+            jump = 0;
+        }
+     
     }
 
     public void Move(float direction)
@@ -124,3 +132,4 @@ public class PlayerMovement : MonoBehaviour, IMovement
 
     
 }
+
