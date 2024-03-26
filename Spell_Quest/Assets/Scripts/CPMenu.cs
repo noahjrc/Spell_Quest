@@ -120,6 +120,27 @@ private void Start()
             CloseMenu();
             playerLife.Die();
             break;
+        case 22:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 23:
+            CloseMenu();
+            break;
+        case 24:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 25:
+            CloseMenu();
+            break;
+        case 26:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 27:
+            CloseMenu();
+            break;
     }
 }
  public void OnButton2Click() {
@@ -200,6 +221,28 @@ private void Start()
         case 21:
             CloseMenu();
             break;
+        case 22:
+            CloseMenu();
+            break;
+        case 23:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 24:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 25:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 26:
+            CloseMenu();
+            break;
+        case 27:
+            CloseMenu();
+            playerLife.Die();
+            break;
     }
 }
  public void OnButton3Click() {
@@ -279,6 +322,29 @@ private void Start()
             CloseMenu();
             break;
         case 21:
+            CloseMenu();
+            playerLife.Die();
+            break;  
+        case 22:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 23:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 24:
+            CloseMenu();
+            break;
+        case 25:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 26:    
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 27:
             CloseMenu();
             playerLife.Die();
             break;  
