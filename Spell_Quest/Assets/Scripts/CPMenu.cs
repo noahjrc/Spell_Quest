@@ -76,6 +76,39 @@ private void Start()
             CloseMenu();
             playerLife.Die();
             break;
+        case 10:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 11:
+            CloseMenu();
+            break;
+        case 12:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 13:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 14:
+            CloseMenu();
+            break;
+        case 15:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 16:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 17:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 18:
+            CloseMenu();
+            break;
     }
 }
  public void OnButton2Click() {
@@ -110,6 +143,38 @@ private void Start()
             CloseMenu();
             break;
         case 9:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 10:
+            CloseMenu();
+            break;
+        case 11:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 12:
+            CloseMenu();
+            break;
+        case 13:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 14: 
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 15:
+            CloseMenu();
+            break;
+        case 16:
+            CloseMenu();
+            break;
+        case 17:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 18:
             CloseMenu();
             playerLife.Die();
             break;
@@ -149,6 +214,40 @@ private void Start()
             break;
          case 9:
             CloseMenu();
+            break;
+        case 10:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 11:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 12:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 13:
+            CloseMenu();
+            break;
+        case 14:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 15:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 16:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 17:
+            CloseMenu();
+            break;
+        case 18:
+            CloseMenu();
+            playerLife.Die();
             break;
     }
 }
