@@ -8,7 +8,7 @@ public class Check_5 : MonoBehaviour
     public int listNum;
 
     public List<string> list13 = new List<string> { "Lait", "Lite", "Light" };
-    public List<string> list14 = new List<string> { "Tiger", "Tyger", "Tigger" };
+    public List<string> list14 = new List<string> { "Tiger", "Tyger", "Tigur" };
     public List<string> list15 = new List<string> { "Hapie", "Happy", "Hapy" };
 
     public List<string> checkpointTexts;
