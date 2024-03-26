@@ -7,7 +7,8 @@ Incorporating this project:
   Code files
   Pixel Adventure Textures from the Unity asset store
   Sound Files from the Unity asset store
-  Word sound files from text-to-speech mp3 downloaded 
+  Word sound files from text-to-speech MP3 downloaded 
+  Attach necessary files to object in Unity 
   
   
   
