@@ -8,8 +8,8 @@ public class Check_1 : MonoBehaviour
     public int listNum;
 
     public List<string> list1 = new List<string> { "Cat", "Kat", "Cate" };
-    public List<string> list2 = new List<string> { "Dog", "Doge", "Dug" };
-    public List<string> list3 = new List<string> { "Rand", "Random8", "Random9" };
+    public List<string> list2 = new List<string> { "Doge", "Dug", "Dog" };
+    public List<string> list3 = new List<string> { "Bole", "Bowl", "Bol" };
 
     public List<string> checkpointTexts;
 

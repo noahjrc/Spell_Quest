@@ -4,9 +4,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
-    public void StartGame()
+    public void Easy()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
-    
+
+    public void Medium() 
+    {
+        SceneManager.LoadScene( 2);
+    }
+
+    public void Hard()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+     public void Quit()
+    {
+        Application.Quit();
+    }
 }
+    
+

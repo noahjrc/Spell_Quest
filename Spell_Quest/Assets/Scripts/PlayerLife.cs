@@ -11,12 +11,12 @@ public interface ICommand
 public class PlayerLife : MonoBehaviour, ICommand
 {
 
-    private Animator anim;
-    private Rigidbody2D rb;
+    public Animator anim;
+   public Rigidbody2D rb;
 
     [SerializeField] private AudioSource DeathSoundEffect;
 
-    private void Start()
+    public void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -31,7 +31,7 @@ public class PlayerLife : MonoBehaviour, ICommand
         }
     }
 
-    private void Die()
+    public void Die()
     {
         anim.SetTrigger("death");
         rb.bodyType = RigidbodyType2D.Static;

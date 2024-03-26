@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CPMenu : MonoBehaviour
 {
+     public PlayerLife playerLife; // Assign this in the inspector
     public GameObject menuPanel; // Assign this in the inspector
     public GameObject button1; // Assign this in the inspector
     public GameObject button2; // Assign this in the inspector
@@ -12,10 +13,11 @@ public class CPMenu : MonoBehaviour
     private Dictionary<GameObject, List<List<string>>> checkpointTexts;
     public int chosenNumList;
 
-    private void Start()
-    {
-        menuPanel.SetActive(false); // Hide the menu at the start
-    }
+private void Start()
+{
+    menuPanel.SetActive(false); // Hide the menu at the start
+
+}
 
     public void OpenMenu(List<string> checkpointTexts, int listNum)
     {
@@ -32,4 +34,122 @@ public class CPMenu : MonoBehaviour
         textMesh3.text = checkpointTexts[2];
         
     }
+
+    public void CloseMenu()
+    {
+        menuPanel.SetActive(false); // Hide the menu
+        Time.timeScale = 1f;
+    }
+
+ public void OnButton1Click() {
+    switch (chosenNumList) {
+        case 1:
+            CloseMenu();
+            break;
+        case 2:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 3:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 4:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 5:
+            CloseMenu();
+            break;
+        case 6: 
+            CloseMenu();
+            break;
+        case 7:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 8:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 9:
+            CloseMenu();
+            playerLife.Die();
+            break;
+    }
+}
+ public void OnButton2Click() {
+    switch (chosenNumList) {
+        case 1:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 2:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 3:
+            CloseMenu();
+            break;
+        case 4:
+            CloseMenu();
+            break;
+        case 5:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 6: 
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 7:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 8:
+            CloseMenu();
+            break;
+        case 9:
+            CloseMenu();
+            playerLife.Die();
+            break;
+    }
+}
+ public void OnButton3Click() {
+    switch (chosenNumList) {
+        case 1:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 2:
+            CloseMenu();
+            break;
+        case 3:
+            CloseMenu();
+            playerLife.Die();
+            break;
+       case 4:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 5:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 6: 
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 7:
+            CloseMenu();
+            break;
+        case 8:
+            CloseMenu();
+            playerLife.Die();
+            break;
+         case 9:
+            CloseMenu();
+            break;
+    }
+}
 }
