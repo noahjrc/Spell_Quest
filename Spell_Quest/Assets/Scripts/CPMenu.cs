@@ -109,6 +109,17 @@ private void Start()
         case 18:
             CloseMenu();
             break;
+        case 19:
+            CloseMenu();
+            break;  
+        case 20:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 21:
+            CloseMenu();
+            playerLife.Die();
+            break;
     }
 }
  public void OnButton2Click() {
@@ -177,6 +188,17 @@ private void Start()
         case 18:
             CloseMenu();
             playerLife.Die();
+            break;
+        case 19:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 20:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 21:
+            CloseMenu();
             break;
     }
 }
@@ -249,6 +271,17 @@ private void Start()
             CloseMenu();
             playerLife.Die();
             break;
+        case 19:
+            CloseMenu();
+            playerLife.Die();
+            break;
+        case 20:
+            CloseMenu();
+            break;
+        case 21:
+            CloseMenu();
+            playerLife.Die();
+            break;  
     }
 }
 }
