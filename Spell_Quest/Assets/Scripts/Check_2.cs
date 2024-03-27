@@ -13,6 +13,10 @@ public class Check_2 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource HitSoundEffect;
+    [SerializeField] private AudioSource BlueSoundEffect;
+    [SerializeField] private AudioSource BeanSoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(4, 7);
@@ -39,6 +43,19 @@ public class Check_2 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 4)
+            {
+                HitSoundEffect.Play();
+            }
+            else if(listNum == 5)
+            {
+                BlueSoundEffect.Play();
+            }
+
+            else
+            {
+                BeanSoundEffect.Play();
+            }
         }
     }
 }

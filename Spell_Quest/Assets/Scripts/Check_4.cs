@@ -13,6 +13,10 @@ public class Check_4 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource AppleSoundEffect;
+    [SerializeField] private AudioSource PizzaSoundEffect;
+    [SerializeField] private AudioSource HoneySoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(10, 13);
@@ -39,6 +43,19 @@ public class Check_4 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 10)
+            {
+                AppleSoundEffect.Play();
+            }
+            else if(listNum == 11)
+            {
+                PizzaSoundEffect.Play();
+            }
+
+            else
+            {
+                HoneySoundEffect.Play();
+            }
         }
     }
 }
