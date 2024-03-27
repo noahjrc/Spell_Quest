@@ -13,6 +13,10 @@ public class Check_3 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource KidSoundEffect;
+    [SerializeField] private AudioSource CarSoundEffect;
+    [SerializeField] private AudioSource ButSoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(7, 10);
@@ -39,6 +43,19 @@ public class Check_3 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 7)
+            {
+                KidSoundEffect.Play();
+            }
+            else if(listNum == 8)
+            {
+                CarSoundEffect.Play();
+            }
+
+            else
+            {
+                ButSoundEffect.Play();
+            }
         }
     }
 }

@@ -13,6 +13,10 @@ public class Check_6 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource BlockSoundEffect;
+    [SerializeField] private AudioSource FenceSoundEffect;
+    [SerializeField] private AudioSource WrongSoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(16, 19);
@@ -39,6 +43,19 @@ public class Check_6 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 16)
+            {
+                BlockSoundEffect.Play();
+            }
+            else if(listNum == 17)
+            {
+                FenceSoundEffect.Play();
+            }
+
+            else
+            {
+                WrongSoundEffect.Play();
+            }
         }
     }
 }

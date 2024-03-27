@@ -13,6 +13,10 @@ public class Check_8 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource CaptureSoundEffect;
+    [SerializeField] private AudioSource CapableSoundEffect;
+    [SerializeField] private AudioSource MeasureSoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(22, 25);
@@ -39,6 +43,19 @@ public class Check_8 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 22)
+            {
+                CaptureSoundEffect.Play();
+            }
+            else if(listNum == 23)
+            {
+                CapableSoundEffect.Play();
+            }
+
+            else
+            {
+                MeasureSoundEffect.Play();
+            }
         }
     }
 }

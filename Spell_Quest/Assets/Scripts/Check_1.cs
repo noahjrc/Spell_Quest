@@ -13,6 +13,10 @@ public class Check_1 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource CatSoundEffect;
+    [SerializeField] private AudioSource DogSoundEffect;
+    [SerializeField] private AudioSource BowlSoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(1, 4);
@@ -21,16 +25,20 @@ public class Check_1 : MonoBehaviour
         {
             checkpointTexts = list1;
             listNum = 1;
+            
+
         }
         else if (randomNumber == 2)
         {
             checkpointTexts = list2;
             listNum = 2;
+            
         }
         else if (randomNumber == 3)
         {
             checkpointTexts = list3;
             listNum = 3;
+
         }
     }
 
@@ -39,6 +47,19 @@ public class Check_1 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 1)
+            {
+                CatSoundEffect.Play();
+            }
+            else if(listNum == 2)
+            {
+                DogSoundEffect.Play();
+            }
+
+            else
+            {
+                BowlSoundEffect.Play();
+            }
         }
     }
 }

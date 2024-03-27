@@ -13,6 +13,10 @@ public class Check_5 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource LightSoundEffect;
+    [SerializeField] private AudioSource TigerSoundEffect;
+    [SerializeField] private AudioSource HappySoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(13, 16);
@@ -39,6 +43,19 @@ public class Check_5 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 13)
+            {
+                LightSoundEffect.Play();
+            }
+            else if(listNum == 14)
+            {
+                TigerSoundEffect.Play();
+            }
+
+            else
+            {
+                HappySoundEffect.Play();
+            }
         }
     }
 }

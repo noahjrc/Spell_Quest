@@ -13,6 +13,10 @@ public class Check_7 : MonoBehaviour
 
     public List<string> checkpointTexts;
 
+    [SerializeField] private AudioSource AbilitySoundEffect;
+    [SerializeField] private AudioSource DestroySoundEffect;
+    [SerializeField] private AudioSource NervousSoundEffect;
+
     private void Start()
     {
         int randomNumber = Random.Range(19, 22);
@@ -39,6 +43,19 @@ public class Check_7 : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             cpMenu.OpenMenu(checkpointTexts, listNum);
+            if(listNum == 19)
+            {
+                AbilitySoundEffect.Play();
+            }
+            else if(listNum == 20)
+            {
+                DestroySoundEffect.Play();
+            }
+
+            else
+            {
+                NervousSoundEffect.Play();
+            }
         }
     }
 }
