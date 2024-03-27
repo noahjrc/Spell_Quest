@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
 {
 
-    private AudioSource finishSound;
+    [SerializeField] private AudioSource finishSound;
 
     private bool IsFinished = false;
+
+    
     
     private void Start()
     {
@@ -19,7 +21,7 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.name == "Player" && !IsFinished)
         {
-           //finishSound.Play();
+           finishSound.Play();
 
 
             //Calls CompleteLevel() with a delay of 2 seconds
